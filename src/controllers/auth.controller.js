@@ -216,7 +216,7 @@ export async function login(req, res) {
         console.log("BODY:", req.body);
 
         if (!user) {
-            return res.status(400).json({ message: "User not found" });
+            return res.status(400).json({ message: "User not found please create account first" });
         }
 
         // 🔥 SAME HASHING AS REGISTER
