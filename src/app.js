@@ -11,9 +11,9 @@ app.use(morgan('dev'))
 app.use(cookieParser())
 
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "https://hydrolog-water-frontend.vercel.app", // Apna frontend URL yahan copy-paste karein
   credentials: true
-}))
+}));
 
 app.get("/", (req, res) => {
   res.send("Backend is running successfully for Deployment! 🚀");
