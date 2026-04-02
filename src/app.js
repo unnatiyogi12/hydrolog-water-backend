@@ -14,7 +14,11 @@ app.use(cors({
   origin: "http://localhost:3000",
   credentials: true
 }))
-// using all the routes here
+
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully for Deployment! 🚀");
+});
+
 app.use("/api/auth", authRouter);
 app.use("/api/water", waterRoutes);
 app.use("/api/push", pushRoutes);
